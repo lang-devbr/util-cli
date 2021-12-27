@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{02A2BA75-18AE-4F88-BB03-1659AE04F9D0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{24B5F315-1FA9-4A49-8792-7CBB1062E80F}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilCli.App", "UtilCli.App\UtilCli.App.csproj", "{DBB29F19-E65C-4502-A57E-59C5170D5C1C}"
 EndProject

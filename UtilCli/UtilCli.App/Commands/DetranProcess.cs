@@ -26,7 +26,7 @@ namespace UtilCli.App.Commands
             if (string.IsNullOrEmpty(processNumber))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Argument not found.");
+                Console.WriteLine("Argument not found. For help use -h.");
                 return false;
             }
 
@@ -55,7 +55,7 @@ namespace UtilCli.App.Commands
                 if (despacho == null)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine($"Process number: {processNumber} not found.");
+                    Console.WriteLine($"Process number: {processNumber} not found. For help use -h.");
                     return false;
                 }
                 else

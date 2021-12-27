@@ -30,7 +30,7 @@ namespace UtilCli.App.Commands
             if (string.IsNullOrEmpty(city))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Argument not found.");
+                Console.WriteLine("Argument not found. For help use -h.");
                 return false;
             }
 
@@ -42,7 +42,7 @@ namespace UtilCli.App.Commands
                 if(!response.IsSuccessStatusCode)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine($"Error to get weather informations.");
+                    Console.WriteLine($"Error to get weather informations. For help use -h.");
                     return false;
 
                 }

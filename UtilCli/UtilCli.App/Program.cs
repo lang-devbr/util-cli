@@ -26,7 +26,7 @@ CreateConsoleLine(Console.WindowWidth);
 if (args.Length <= 0)
 {
     Console.ForegroundColor = ConsoleColor.Red;
-    Console.WriteLine("Argument not found.");
+    Console.WriteLine("Argument not found. For help use -h.");
     return;
 }
 
@@ -44,13 +44,20 @@ if (args[0].Equals("-w"))
     await dp.Execute(args);
 }
 
+if (args[0].Equals("-h"))
+{
+    control = false;
+    HelpProcess h = new HelpProcess(_configuration);
+    await h.Execute(args);
+}
+
 Console.ForegroundColor = ConsoleColor.Cyan;
 CreateConsoleLine(Console.WindowWidth);
 
 if (control)
 {
     Console.ForegroundColor = ConsoleColor.Yellow;
-    Console.WriteLine("No command for this argument.");
+    Console.WriteLine("No command for this argument. For help use -h.");
 }
 
 static void CreateConsoleLine(int width)
