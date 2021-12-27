@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "UtilCli.App": {
+      "commandName": "Project",
+      "commandLineArgs": "-w rio de janeiro"
+    }
+  }
+}
