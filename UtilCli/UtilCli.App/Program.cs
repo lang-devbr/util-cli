@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
 using System.Diagnostics;
 using UtilCli.App.Commands;
+using UtilCli.App.Shared;
 
 bool control = true;
 
@@ -18,11 +19,19 @@ if (File.Exists(configPath))
 }
 
 Console.ForegroundColor = ConsoleColor.Cyan;
-CreateConsoleLine(Console.WindowWidth);
-Console.WriteLine($"Util Cli (v.{PlatformServices.Default.Application.ApplicationVersion})");
-Console.WriteLine($"Arguments: {string.Join(", ", args)}");
+ConsoleUtil.CreateConsoleLine(Console.WindowWidth);
+string title = $"Util CLI";
+Console.SetCursorPosition((Console.WindowWidth - title.Length) / 2, Console.CursorTop);
+Console.WriteLine(title);
+string subTitle = $"Arguments: {string.Join(", ", args)}";
+Console.SetCursorPosition((Console.WindowWidth - subTitle.Length) / 2, Console.CursorTop);
+Console.WriteLine(subTitle);
+string version = $"(version: { PlatformServices.Default.Application.ApplicationVersion})";
+Console.SetCursorPosition((Console.WindowWidth - version.Length) / 2, Console.CursorTop);
+Console.WriteLine(version);
+
 Console.ForegroundColor = ConsoleColor.White;
-CreateConsoleLine(Console.WindowWidth);
+ConsoleUtil.CreateConsoleLine(Console.WindowWidth);
 
 if (args.Length <= 0)
 {
@@ -31,7 +40,14 @@ if (args.Length <= 0)
     return;
 }
 
-if(args[0].Equals("-dp"))
+if (args[0].Equals("-b"))
+{
+    control = false;
+    BlogProcess b = new BlogProcess(_configuration);
+    await b.Execute(args);
+}
+
+if (args[0].Equals("-dp"))
 {
     control = false;
     DetranProcess dp = new DetranProcess(_configuration);
@@ -63,22 +79,10 @@ if (args[0].Equals("-r"))
 }
 
 Console.ForegroundColor = ConsoleColor.Cyan;
-CreateConsoleLine(Console.WindowWidth);
+ConsoleUtil.CreateConsoleLine(Console.WindowWidth);
 
 if (control)
 {
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine("No command for this argument. For help use -h.");
-}
-
-static void CreateConsoleLine(int width)
-{
-    string line = string.Empty;
-
-    for (int i = 0; i < width-2; i++)
-    {
-        line += "-";
-    }
-
-    Console.WriteLine(line);
 }

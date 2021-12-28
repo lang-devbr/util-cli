@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using UtilCli.App.Shared;
 
 namespace UtilCli.App.Commands
 {
@@ -52,7 +53,8 @@ namespace UtilCli.App.Commands
                 Console.ForegroundColor = ConsoleColor.Green;
 
                 Console.Write($"\t Previsão do tempo \r\n");
-                Console.Write($"----------------------------------------\r\n");
+                ConsoleUtil.CreateConsoleLine(Console.WindowWidth);
+                Console.Write($"\r\n");
                 Console.Write($"Cidade\t\t | {w.name} \r\n");
                 Console.Write($"----------------------------------------\r\n");
                 Console.Write($"Temperatura\t | {w.main?.temp} °C\r\n");
@@ -64,7 +66,8 @@ namespace UtilCli.App.Commands
                 Console.Write($"Vol. chuva -1h\t | {w.rain?._1h} mm\r\n");
                 Console.Write($"Nebulosidade\t | {w.clouds?.all} %\r\n");
                 Console.Write($"Vel. vento\t | {w.wind?.speed} metros/seg\r\n");
-                Console.Write($"----------------------------------------\r\n");
+                ConsoleUtil.CreateConsoleLine(Console.WindowWidth);
+                Console.Write($"\r\n");
                 Console.WriteLine("Condições do tempo: \r\n");
                 foreach (var item in w.weather)
                     Console.Write($" * {item.description}\r\n");

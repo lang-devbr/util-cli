@@ -1,6 +1,7 @@
 ﻿using HtmlAgilityPack;
 using Microsoft.Extensions.Configuration;
 using System.Net.Http.Headers;
+using UtilCli.App.Shared;
 
 namespace UtilCli.App.Commands
 {
@@ -73,8 +74,9 @@ namespace UtilCli.App.Commands
                     var orgao_destino = d.DocumentNode.SelectSingleNode("//input[@name='orgao_destino']");
                     var endereco = d.DocumentNode.SelectSingleNode("//input[@name='endereco']");
 
-                    Console.Write($"DETRAN PROCESSO \r\n");
-                    Console.Write($"-----------------------------------------------------------------------------------------\r\n");
+                    Console.Write($"Detran - Processo \r\n");
+                    ConsoleUtil.CreateConsoleLine(Console.WindowWidth);
+                    Console.Write($"\r\n");
                     Console.WriteLine($"Processo\t\t | {processo.Attributes["value"].Value}");
                     Console.WriteLine($"Requerente\t\t | {requerente.Attributes["value"].Value}");
                     Console.WriteLine($"Assunto\t\t\t | {assunto.Attributes["value"].Value}");
