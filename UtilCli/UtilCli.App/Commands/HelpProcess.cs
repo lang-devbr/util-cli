@@ -17,6 +17,8 @@ namespace UtilCli.App.Commands
         {
             Console.WriteLine("Help");
 
+
+
             return await Task.FromResult(true);
         }
     }

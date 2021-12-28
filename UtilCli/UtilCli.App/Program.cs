@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
+using System.Diagnostics;
 using UtilCli.App.Commands;
 
 bool control = true;
@@ -49,6 +50,16 @@ if (args[0].Equals("-h"))
     control = false;
     HelpProcess h = new HelpProcess(_configuration);
     await h.Execute(args);
+}
+
+if (args[0].Equals("-s"))
+{
+    Process.Start("shutdown", "/s /t 0");
+}
+
+if (args[0].Equals("-r"))
+{
+    Process.Start("shutdown", "/r /t 0");
 }
 
 Console.ForegroundColor = ConsoleColor.Cyan;
