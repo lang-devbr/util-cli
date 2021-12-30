@@ -20,7 +20,7 @@ if (File.Exists(configPath))
 
 Console.ForegroundColor = ConsoleColor.Cyan;
 ConsoleUtil.CreateConsoleLine(Console.WindowWidth);
-string title = $"Util CLI";
+string title = $"util-cli";
 Console.SetCursorPosition((Console.WindowWidth - title.Length) / 2, Console.CursorTop);
 Console.WriteLine(title);
 string subTitle = $"Arguments: {string.Join(", ", args)}";
