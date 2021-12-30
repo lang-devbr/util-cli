@@ -48,6 +48,7 @@ if (args[0].Equals("-c"))
 
 if (args[0].Equals("-m"))
 {
+    //For this command this repo is necessary https://github.com/gsass1/NTop
     string strCmdText = "/C ntop";
     System.Diagnostics.Process.Start("CMD.exe", strCmdText);
 }
