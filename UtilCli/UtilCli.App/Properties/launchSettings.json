@@ -2,7 +2,7 @@
   "profiles": {
     "UtilCli.App": {
       "commandName": "Project",
-      "commandLineArgs": "-b"
+      "commandLineArgs": "-top"
     }
   }
 }

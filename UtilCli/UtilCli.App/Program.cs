@@ -40,6 +40,18 @@ if (args.Length <= 0)
     return;
 }
 
+if (args[0].Equals("-c"))
+{
+    string strCmdText = "/C clear";
+    System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+}
+
+if (args[0].Equals("-m"))
+{
+    string strCmdText = "/C ntop";
+    System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+}
+
 if (args[0].Equals("-b"))
 {
     control = false;
