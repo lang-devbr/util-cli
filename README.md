@@ -76,7 +76,7 @@ uc -s
 ```
 * To get help (**improvement)
 ```
-uc -s 
+uc -h 
 ```
 * To consult an administrative process of the Government of Rio de Janeiro - [SICOP - Sistema Único de Controle de Protocolo (rio.rj.gov.br)](http://www2.rio.rj.gov.br/sicop/sicop.asp)
 ```
