@@ -9,9 +9,9 @@
 	<ToolCommandName>uc</ToolCommandName>
 	<PackageOutputPath>./nupkg</PackageOutputPath>
 	<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-	<AssemblyVersion>1.0.0.1</AssemblyVersion>
-	<FileVersion>1.0.0.1</FileVersion>
-	<Version>1.0.1</Version>
+	<AssemblyVersion>1.0.2.0</AssemblyVersion>
+	<FileVersion>1.0.2.0</FileVersion>
+	<Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +21,10 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="nupkg\" />
   </ItemGroup>
 
 </Project>
