@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
 using System.Diagnostics;
 using UtilCli.App.Commands;
+using UtilCli.App.Commands.Weather;
 using UtilCli.App.Shared;
 
 bool control = true;
@@ -70,8 +71,8 @@ if (args[0].Equals("-dp"))
 if (args[0].Equals("-w"))
 {
     control = false;
-    WeatherProcess dp = new WeatherProcess(_configuration);
-    await dp.Execute(args);
+    WeatherProcess w = new WeatherProcess(_configuration);
+    await w.Execute(args);
 }
 
 if (args[0].Equals("-h"))
