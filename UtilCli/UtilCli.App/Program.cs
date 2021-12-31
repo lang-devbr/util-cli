@@ -57,14 +57,14 @@ if (args[0].Equals("-t"))
 if (args[0].Equals("-b"))
 {
     control = false;
-    BlogProcess b = new BlogProcess(_configuration);
+    BlogCommand b = new BlogCommand(_configuration);
     await b.Execute(args);
 }
 
 if (args[0].Equals("-dp"))
 {
     control = false;
-    DetranProcess dp = new DetranProcess(_configuration);
+    DetranCommand dp = new DetranCommand(_configuration);
     await dp.Execute(args);
 }
 
@@ -78,7 +78,7 @@ if (args[0].Equals("-w"))
 if (args[0].Equals("-h"))
 {
     control = false;
-    HelpProcess h = new HelpProcess(_configuration);
+    HelpCommand h = new HelpCommand(_configuration);
     await h.Execute(args);
 }
 

@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using HtmlAgilityPack.CssSelectors.NetCore;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System.Text;

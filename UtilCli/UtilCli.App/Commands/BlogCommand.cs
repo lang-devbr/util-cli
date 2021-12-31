@@ -4,11 +4,11 @@ using UtilCli.App.Shared;
 
 namespace UtilCli.App.Commands
 {
-    public class BlogProcess
+    public class BlogCommand
     {
         private readonly IConfigurationRoot? _configuration;
 
-        public BlogProcess(IConfigurationRoot? configuration)
+        public BlogCommand(IConfigurationRoot? configuration)
         {
             _configuration = configuration;
         }

@@ -1,14 +1,12 @@
-﻿using HtmlAgilityPack;
-using Microsoft.Extensions.Configuration;
-using System.Net.Http.Headers;
+﻿using Microsoft.Extensions.Configuration;
 
 namespace UtilCli.App.Commands
 {
-    public class HelpProcess
+    public class HelpCommand
     {
         private readonly IConfigurationRoot? _configuration;
 
-        public HelpProcess(IConfigurationRoot? configuration)
+        public HelpCommand(IConfigurationRoot? configuration)
         {
             _configuration = configuration;
         }

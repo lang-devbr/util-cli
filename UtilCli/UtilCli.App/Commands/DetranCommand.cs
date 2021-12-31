@@ -5,11 +5,11 @@ using UtilCli.App.Shared;
 
 namespace UtilCli.App.Commands
 {
-    public class DetranProcess
+    public class DetranCommand
     {
         private readonly IConfigurationRoot? _configuration;
 
-        public DetranProcess(IConfigurationRoot? configuration)
+        public DetranCommand(IConfigurationRoot? configuration)
         {
             _configuration = configuration;
         }
