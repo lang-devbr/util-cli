@@ -21,7 +21,7 @@ namespace UtilCli.App.Commands
                 blogSection += args[1];
 
             if (string.IsNullOrEmpty(blogSection) && _configuration != null)
-                blogSection = _configuration.GetSection("blog").Value;
+                blogSection = _configuration.GetSection("blog-section").Value;
 
             if (string.IsNullOrEmpty(blogSection))
             {

@@ -36,7 +36,7 @@ For Windows users it is possible to configure a file in the path: **C:/UtilCli/c
 {
   "protocol-number": "0000000000000",
   "weather-city": "Rio de janeiro",
-  "blog": "dotnet"
+  "blog-section": "dotnet"
 }
 ```
 
@@ -64,7 +64,7 @@ uc -b
 ```
 or
 ```
-uc -b <section> (dotnet, visualstudio, etc)
+uc -b <blog-section> (dotnet, visualstudio, etc)
 ```
 * To print weather forecast - https://weather.com/
 ```
