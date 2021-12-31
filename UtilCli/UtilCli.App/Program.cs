@@ -61,10 +61,10 @@ if (args[0].Equals("-b"))
     await b.Execute(args);
 }
 
-if (args[0].Equals("-dp"))
+if (args[0].Equals("-p"))
 {
     control = false;
-    DetranCommand dp = new DetranCommand(_configuration);
+    SicopCommand dp = new SicopCommand(_configuration);
     await dp.Execute(args);
 }
 

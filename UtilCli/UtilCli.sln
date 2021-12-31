@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{24B5F315-1FA9-4A49-8792-7CBB1062E80F}"
 	ProjectSection(SolutionItems) = preProject
 		..\README.md = ..\README.md
+		..\util-cli.png = ..\util-cli.png
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilCli.App", "UtilCli.App\UtilCli.App.csproj", "{DBB29F19-E65C-4502-A57E-59C5170D5C1C}"
