@@ -22,7 +22,7 @@ namespace UtilCli.App.Commands
                 processNumber = args[1];
 
             if (string.IsNullOrEmpty(processNumber) && _configuration != null)
-                processNumber = _configuration.GetSection("sicop-rj-process").Value;
+                processNumber = _configuration.GetSection("protocol-number").Value;
 
             if (string.IsNullOrEmpty(processNumber))
             {

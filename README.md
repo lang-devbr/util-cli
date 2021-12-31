@@ -34,7 +34,7 @@ dotnet pack && dotnet tool update --global --add-source ./nupkg UtilCli.App
 For Windows users it is possible to configure a file in the path: **C:/UtilCli/config/settings.json** to configure some standard information of the utility, such as the process for querying Sicop, city for querying the weather forecast and section of the news blog from microsoft.
 ```
 {
-  "sicop-rj-process": "0000000000000",
+  "protocol-number": "0000000000000",
   "weather-city": "Rio de janeiro",
   "blog": "dotnet"
 }
