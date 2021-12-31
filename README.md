@@ -58,7 +58,7 @@ or
 ```
 uc -b <section> (dotnet, visualstudio, etc)
 ```
-* To print weather forecast
+* To print weather forecast - https://weather.com/
 ```
 uc -w
 ```
@@ -78,7 +78,7 @@ uc -s
 ```
 uc -s 
 ```
-* To consult an administrative process of the Government of Rio de Janeiro
+* To consult an administrative process of the Government of Rio de Janeiro - [SICOP - Sistema Único de Controle de Protocolo (rio.rj.gov.br)](http://www2.rio.rj.gov.br/sicop/sicop.asp)
 ```
 uc -dp <protocol-number> 
 ```
@@ -100,4 +100,4 @@ Alternatively, see the GitHub documentation at [how to create a pull request](ht
 
 This project is under license. See the [LICENSE](LICENSE.md) file for more details. (**improvement)
 
-[⬆ Back to the top](#Util-Cli)<br>
+[⬆ Back to the top](# Util-Cli)<br>
