@@ -3,7 +3,7 @@
 <img src="util-cli.png" alt="util-cli">
 <br>
 This project is for personal use and is focused on automations that fulfill specific tasks for the author of this repository. But it can be used to create automations for different types.
-<br>
+
 > A cli utility because using the mouse is not cool enough!
 
 ### Improvements
