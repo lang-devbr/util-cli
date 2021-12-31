@@ -49,7 +49,7 @@ namespace UtilCli.App.Commands
                 var secondResponse = await client.PostAsync("/sicop/sicop.asp", new FormUrlEncodedContent(secondRequest));
 
                 HtmlDocument d = new HtmlDocument();
-                d.Load(GenerateStreamFromString(secondResponse.Content.ReadAsStringAsync().Result));
+                d.Load(ConsoleUtil.GenerateStreamFromString(secondResponse.Content.ReadAsStringAsync().Result));
 
                 var despacho = d.DocumentNode.SelectSingleNode("//input[@name='despacho']");
 
@@ -92,16 +92,6 @@ namespace UtilCli.App.Commands
             }
 
             return await Task.FromResult(true);
-        }
-
-        private Stream GenerateStreamFromString(string s)
-        {
-            var stream = new MemoryStream();
-            var writer = new StreamWriter(stream);
-            writer.Write(s);
-            writer.Flush();
-            stream.Position = 0;
-            return stream;
         }
     }
 }

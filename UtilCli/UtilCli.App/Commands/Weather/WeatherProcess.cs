@@ -79,7 +79,7 @@ namespace UtilCli.App.Commands.Weather
                 var pageResponse = await client.GetAsync($"/pt-BR/clima/hoje/l/{id}");
 
                 HtmlDocument d = new HtmlDocument();
-                d.Load(GenerateStreamFromString(pageResponse.Content.ReadAsStringAsync().Result));
+                d.Load(ConsoleUtil.GenerateStreamFromString(pageResponse.Content.ReadAsStringAsync().Result));
 
                 var tempMaxMin = d.DocumentNode.QuerySelector("[data-testid='WeatherDetailsListItem']").InnerText.Replace("TemperatureMax. / Mín.", string.Empty);
                 var wind = d.DocumentNode.QuerySelector("[data-testid='WeatherDetailsListItem']").NextSibling.InnerText.Replace("WindVentoWind Direction", string.Empty);
@@ -122,16 +122,6 @@ namespace UtilCli.App.Commands.Weather
             }
 
             return await Task.FromResult(true);
-        }
-
-        private Stream GenerateStreamFromString(string s)
-        {
-            var stream = new MemoryStream();
-            var writer = new StreamWriter(stream);
-            writer.Write(s);
-            writer.Flush();
-            stream.Position = 0;
-            return stream;
         }
     }
 }

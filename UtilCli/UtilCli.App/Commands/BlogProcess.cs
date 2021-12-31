@@ -43,7 +43,7 @@ namespace UtilCli.App.Commands
                 }
 
                 HtmlDocument d = new HtmlDocument();
-                d.Load(GenerateStreamFromString(response.Content.ReadAsStringAsync().Result));
+                d.Load(ConsoleUtil.GenerateStreamFromString(response.Content.ReadAsStringAsync().Result));
 
                 var titles = d.DocumentNode.SelectNodes("//div[@class='entry-content col-md-8']");
 
@@ -65,16 +65,6 @@ namespace UtilCli.App.Commands
             }
 
             return await Task.FromResult(true);
-        }
-
-        private Stream GenerateStreamFromString(string s)
-        {
-            var stream = new MemoryStream();
-            var writer = new StreamWriter(stream);
-            writer.Write(s);
-            writer.Flush();
-            stream.Position = 0;
-            return stream;
         }
     }
 }
