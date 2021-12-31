@@ -1,4 +1,5 @@
-﻿# util-cli
+﻿
+# util-cli
 <img src="util-cli.png" alt="util-cli">
 <br>
 This project is for personal use and is focused on automations that fulfill specific tasks for the author of this repository. But it can be used to create automations for different types.
@@ -76,6 +77,10 @@ uc -s
 * To get help (**improvement)
 ```
 uc -s 
+```
+* To consult an administrative process of the Government of Rio de Janeiro
+```
+uc -dp <protocol-number> 
 ```
 
 ## 📫 Contributing to util-cli
