@@ -27,9 +27,17 @@ Before starting, make sure you have met the following requirements:
 
 To install util-cli globally, follow these steps:
 
-For Linux or Windows, clone this repo and in the project folder UtilCli.App.csproj run the command:
+For Linux or Windows, clone this repo and in the project folder **UtilCli.App.csproj** run the command:
 ```
 dotnet pack && dotnet tool update --global --add-source ./nupkg UtilCli.App
+```
+For Windows users it is possible to configure a file in the path: **C:/UtilCli/config/settings.json** to configure some standard information of the utility, such as the process for querying Sicop, city for querying the weather forecast and section of the news blog from microsoft.
+```
+{
+  "sicop-rj-process": "0000000000000",
+  "weather-city": "Rio de janeiro",
+  "blog": "dotnet"
+}
 ```
 
 ## ☕ How to use util-cli
@@ -76,7 +84,7 @@ uc -s
 ```
 * To get help (**improvement)
 ```
-uc -h 
+uc -s 
 ```
 * To consult an administrative process of the Government of Rio de Janeiro - [SICOP - Sistema Único de Controle de Protocolo (rio.rj.gov.br)](http://www2.rio.rj.gov.br/sicop/sicop.asp)
 ```
